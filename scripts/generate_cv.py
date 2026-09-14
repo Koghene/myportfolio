@@ -11,7 +11,7 @@ from pathlib import Path
 
 from reportlab.lib.colors import HexColor, Color
 from reportlab.lib.pagesizes import A4
-from reportlab.lib.utils import simpleSplit
+from reportlab.lib.utils import ImageReader, simpleSplit
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfgen import canvas
 
@@ -173,12 +173,24 @@ def main():
     sw = SIDEBAR_W - 2 * sx
     y = H - 13 * MM
 
-    # logo KD
-    c.setFillColor(ACCENT)
-    c.roundRect(sx, y - 11 * MM, 11 * MM, 11 * MM, 3 * MM, stroke=0, fill=1)
+    # logo KD (image réelle sur pastille claire, coin arrondi)
+    logo = Path(__file__).resolve().parent.parent / "public" / "images" / "logo-180.png"
+    if logo.exists():
+        c.saveState()
+        clip = c.beginPath()
+        clip.roundRect(sx, y - 12 * MM, 12 * MM, 12 * MM, 3.2 * MM)
+        c.clipPath(clip, stroke=0, fill=0)
+        c.setFillColor(WHITE)
+        c.roundRect(sx, y - 12 * MM, 12 * MM, 12 * MM, 3.2 * MM, stroke=0, fill=1)
+        c.drawImage(str(logo), sx + 0.5 * MM, y - 11.5 * MM, 11 * MM, 11 * MM, mask="auto")
+        c.restoreState()
+    else:
+        c.setFillColor(ACCENT)
+        c.roundRect(sx, y - 11 * MM, 11 * MM, 11 * MM, 3 * MM, stroke=0, fill=1)
+        c.setFillColor(WHITE)
+        c.setFont(BOLD, 13)
+        c.drawCentredString(sx + 5.5 * MM, y - 7.7 * MM, "KD")
     c.setFillColor(WHITE)
-    c.setFont(BOLD, 13)
-    c.drawCentredString(sx + 5.5 * MM, y - 7.7 * MM, "KD")
     c.setFont(BOLD, 8)
     c.drawString(sx + 13.5 * MM, y - 4.6 * MM, "KOGHENE")
     c.drawString(sx + 13.5 * MM, y - 8.4 * MM, "MAKEUNE DIANE")
@@ -191,7 +203,10 @@ def main():
     c.circle(cx, y - photo_r, photo_r, stroke=0, fill=1)
 
     photo = None
-    for candidate in ("photo-cv.jpg", "photo.jpg", "photo.png", "photo-about.jpg"):
+    for candidate in (
+        "photo-cv.png", "photo-about.png", "photo-cv.jpg",
+        "photo-about.jpg", "photo.jpg", "photo.png",
+    ):
         path = Path(__file__).resolve().parent.parent / "public" / "images" / candidate
         if path.exists():
             photo = path
@@ -202,12 +217,17 @@ def main():
         clip = c.beginPath()
         clip.circle(cx, y - photo_r, photo_r)
         c.clipPath(clip, stroke=0, fill=0)
-        c.drawImage(
-            str(photo),
-            cx - photo_r, y - 2 * photo_r,
-            2 * photo_r, 2 * photo_r,
-            preserveAspectRatio=True, anchor="c", mask="auto",
-        )
+        img = ImageReader(str(photo))
+        iw, ih = img.getSize()
+        box = 2 * photo_r
+        scale = max(box / iw, box / ih)  # mode "cover" : remplit le cercle
+        dw, dh = iw * scale, ih * scale
+        # point focal à 22 % du haut (le visage), centré sur le cercle
+        fx, fy = dw / 2, (1 - 0.22) * dh
+        dx = cx - fx
+        dy = (y - photo_r) - fy
+        dy = max(min(dy, y - box), y - dh)  # clamp : aucun bord découvert
+        c.drawImage(img, dx, dy, dw, dh, mask="auto")
         c.restoreState()
     else:
         c.setFillColor(HexColor("#8b9099"))
