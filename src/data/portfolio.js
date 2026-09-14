@@ -13,6 +13,8 @@ import {
   Github,
   Layers3,
   Linkedin,
+  Mail,
+  Monitor,
   Rocket,
   Server,
   Smartphone,
@@ -24,23 +26,24 @@ import { FaWhatsapp } from "react-icons/fa";
    1. IDENTITÉ  (À REMPLACER)
    -------------------------------------------------------------------------- */
 export const profile = {
-  name: "TON NOM",
-  initials: "TN", // affiché dans le logo si aucune image
-  logo: "/images/logo.svg", // mets ton logo dans public/images/ (ou laisse null)
+  name: "Koghene Makeune Diane",
+  initials: "KD",
   photo: "/images/photo.svg", // ta photo de profil (hero)
   aboutPhoto: "/images/photo-about.svg", // ta photo section "À propos"
   cvUrl: "/files/cv.pdf", // dépose ton CV dans public/files/
-  email: "ton.email@exemple.com",
-  phone: "+237 6XX XX XX XX",
-  whatsapp: "2376XXXXXXXX", // format international sans "+"
+  email: "ton.email@exemple.com", // <<< À REMPLACER par ton vrai email
+  phone: "+237 672 71 57 35",
+  whatsapp: "237672715735", // format international sans "+"
   location: "Yaoundé, Cameroun",
   available: true, // affiche le badge "disponible"
 };
 
 export const socials = [
   { label: "GitHub", href: "https://github.com/Koghene", icon: Github },
-  { label: "LinkedIn", href: "https://linkedin.com/in/ton-profil", icon: Linkedin },
+  // Ajoute ton LinkedIn quand tu l'auras :
+  // { label: "LinkedIn", href: "https://linkedin.com/in/ton-profil", icon: Linkedin },
   { label: "WhatsApp", href: `https://wa.me/${profile.whatsapp}`, icon: FaWhatsapp },
+  { label: "Email", href: `mailto:${profile.email}`, icon: Mail },
 ];
 
 /* --------------------------------------------------------------------------
@@ -52,13 +55,14 @@ export const skills = [
   { name: "Python", level: 80, icon: Database },
   { name: "Kotlin (Android)", level: 70, icon: Smartphone },
   { name: "Node.js / API REST", level: 75, icon: Server },
+  { name: "JavaFX / Desktop", level: 70, icon: Monitor },
   { name: "Figma / UI Design", level: 65, icon: Figma },
 ];
 
 export const techStack = [
   "React", "Vite", "JavaScript", "TypeScript", "Java", "Spring Boot",
   "Python", "Kotlin", "Node.js", "PostgreSQL", "MongoDB", "Docker",
-  "Git", "Figma", "Tailwind",
+  "Git", "Figma", "JavaFX", "Electron", "Tailwind",
 ];
 
 /* --------------------------------------------------------------------------
@@ -91,9 +95,9 @@ export const content = {
     },
     hero: {
       eyebrow: "Bonjour, je suis",
-      role: "Développeur Web & Mobile Fullstack",
+      role: "Ingénieure en Génie Informatique — Développement Web, Mobile & Desktop",
       tagline:
-        "Je conçois et développe des applications web et mobiles modernes, rapides et agréables à utiliser — du design de l'interface jusqu'au backend.",
+        "Je conçois et développe des applications web, mobiles et desktop modernes, rapides et agréables à utiliser — du design de l'interface jusqu'au backend.",
     },
     stats: [
       { value: "3+", label: "Années d'expérience" },
@@ -122,6 +126,12 @@ export const content = {
         icon: Smartphone,
       },
       {
+        title: "Développement Desktop",
+        description:
+          "Logiciels de bureau multiplateformes (JavaFX, Electron) pour la gestion métier et le travail hors ligne.",
+        icon: Monitor,
+      },
+      {
         title: "Backend & API",
         description:
           "APIs REST robustes et sécurisées avec Spring Boot ou Node.js, base de données bien modélisée.",
@@ -147,11 +157,11 @@ export const content = {
       },
     ],
     about: {
-      eyebrow: "Développeur fullstack basé à Yaoundé",
+      eyebrow: "Ingénieure en génie informatique basée à Yaoundé",
       paragraphs: [
-        "Je suis un développeur passionné par la création de produits numériques utiles et bien faits. J'aime transformer une idée en une interface claire, rapide et agréable à utiliser.",
-        "Mon travail couvre l'ensemble de la chaîne : conception de l'interface, développement frontend, mise en place du backend et déploiement. Je porte une attention particulière à la qualité du code, à la performance et à l'accessibilité.",
-        "Curieux et rigoureux, je continue d'apprendre chaque jour et je cherche des projets ambitieux où je peux apporter de la valeur.",
+        "Je suis Diane Koghene Makeune, ingénieure en génie informatique passionnée par la création de produits numériques utiles et bien faits. J'aime transformer une idée en une interface claire, rapide et agréable à utiliser.",
+        "Mon travail couvre l'ensemble de la chaîne : conception de l'interface, développement web, mobile et desktop, mise en place du backend et déploiement. Je porte une attention particulière à la qualité du code, à la performance et à l'accessibilité.",
+        "Curieuse et rigoureuse, je continue d'apprendre chaque jour et je cherche des projets ambitieux où je peux apporter de la valeur.",
       ],
       highlights: [
         { icon: Sparkles, label: "Code propre et maintenable" },
@@ -162,7 +172,7 @@ export const content = {
     experience: [
       {
         period: "2024 — aujourd'hui",
-        title: "Développeur Fullstack Freelance",
+        title: "Développeuse Fullstack Freelance",
         org: "Indépendant · Yaoundé",
         description:
           "Conception et développement d'applications web et mobiles pour des clients locaux : de la maquette à la mise en production.",
@@ -170,7 +180,7 @@ export const content = {
       },
       {
         period: "2023 — 2024",
-        title: "Développeur Web (stage / alternance)",
+        title: "Développeuse Web (stage)",
         org: "Nom de l'entreprise",
         description:
           "Développement de fonctionnalités frontend en React et d'APIs REST, participation aux revues de code.",
@@ -178,14 +188,14 @@ export const content = {
       },
       {
         period: "2020 — 2023",
-        title: "Licence / Ingénierie Informatique",
+        title: "Ingénierie en Génie Informatique",
         org: "Nom de l'établissement",
         description:
           "Algorithmique, génie logiciel, bases de données, développement web et mobile.",
         type: "study",
       },
     ],
-    projectCategories: ["Tous", "Web", "Mobile", "Design"],
+    projectCategories: ["Tous", "Web", "Mobile", "Desktop", "Design"],
     projects: [
       {
         title: "Plateforme e-commerce",
@@ -238,6 +248,16 @@ export const content = {
         code: "#",
       },
       {
+        title: "Logiciel de gestion de stock",
+        category: "Desktop",
+        description:
+          "Application de bureau pour le suivi des entrées/sorties de stock, avec rapports imprimables et mode hors ligne.",
+        tags: ["JavaFX", "Java", "SQLite"],
+        image: "/images/project-7.svg",
+        demo: "#",
+        code: "#",
+      },
+      {
         title: "Application de gestion scolaire",
         category: "Web",
         description:
@@ -264,6 +284,7 @@ export const content = {
       serviceOptions: [
         "Développement Web",
         "Développement Mobile",
+        "Développement Desktop",
         "Backend & API",
         "UI / UX Design",
         "Autre",
@@ -297,9 +318,9 @@ export const content = {
     },
     hero: {
       eyebrow: "Hi, I'm",
-      role: "Fullstack Web & Mobile Developer",
+      role: "Computer Engineer — Web, Mobile & Desktop Development",
       tagline:
-        "I design and build modern, fast and delightful web and mobile applications — from the interface down to the backend.",
+        "I design and build modern, fast and delightful web, mobile and desktop applications — from the interface down to the backend.",
     },
     stats: [
       { value: "3+", label: "Years of experience" },
@@ -328,6 +349,12 @@ export const content = {
         icon: Smartphone,
       },
       {
+        title: "Desktop Development",
+        description:
+          "Cross-platform desktop software (JavaFX, Electron) for business management and offline work.",
+        icon: Monitor,
+      },
+      {
         title: "Backend & APIs",
         description:
           "Robust and secure REST APIs with Spring Boot or Node.js, backed by well-modelled databases.",
@@ -353,10 +380,10 @@ export const content = {
       },
     ],
     about: {
-      eyebrow: "Fullstack developer based in Yaoundé",
+      eyebrow: "Computer engineer based in Yaoundé",
       paragraphs: [
-        "I'm a developer passionate about building useful, well-crafted digital products. I love turning an idea into a clear, fast and enjoyable interface.",
-        "My work spans the whole chain: interface design, frontend development, backend implementation and deployment. I care deeply about code quality, performance and accessibility.",
+        "I'm Diane Koghene Makeune, a computer engineer passionate about building useful, well-crafted digital products. I love turning an idea into a clear, fast and enjoyable interface.",
+        "My work spans the whole chain: interface design, web, mobile and desktop development, backend implementation and deployment. I care deeply about code quality, performance and accessibility.",
         "Curious and thorough, I keep learning every day and look for ambitious projects where I can add real value.",
       ],
       highlights: [
@@ -384,14 +411,14 @@ export const content = {
       },
       {
         period: "2020 — 2023",
-        title: "BSc / Computer Engineering",
+        title: "Computer Engineering degree",
         org: "School name",
         description:
           "Algorithms, software engineering, databases, web and mobile development.",
         type: "study",
       },
     ],
-    projectCategories: ["All", "Web", "Mobile", "Design"],
+    projectCategories: ["All", "Web", "Mobile", "Desktop", "Design"],
     projects: [
       {
         title: "E-commerce platform",
@@ -444,6 +471,16 @@ export const content = {
         code: "#",
       },
       {
+        title: "Inventory management software",
+        category: "Desktop",
+        description:
+          "Desktop application tracking stock in and out, with printable reports and offline mode.",
+        tags: ["JavaFX", "Java", "SQLite"],
+        image: "/images/project-7.svg",
+        demo: "#",
+        code: "#",
+      },
+      {
         title: "School management app",
         category: "Web",
         description:
@@ -470,6 +507,7 @@ export const content = {
       serviceOptions: [
         "Web Development",
         "Mobile Development",
+        "Desktop Development",
         "Backend & APIs",
         "UI / UX Design",
         "Other",

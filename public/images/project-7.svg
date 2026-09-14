@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#e4e7ec"/><stop offset="1" stop-color="#cfd4dc"/></linearGradient></defs>
+<rect width="800" height="500" fill="url(#g)"/>
+<circle cx="640" cy="110" r="130" fill="#ff6a00" opacity="0.14"/>
+<rect x="70" y="140" width="300" height="18" rx="9" fill="#9aa1ad"/>
+<rect x="70" y="180" width="210" height="18" rx="9" fill="#b3b9c4"/>
+<rect x="70" y="240" width="140" height="42" rx="21" fill="#ff6a00" opacity="0.85"/>
+<text x="70" y="110" font-family="Inter,sans-serif" font-size="34" font-weight="800" fill="#16181d">Projet 7</text>
+<text x="400" y="470" text-anchor="middle" font-family="Inter,sans-serif" font-size="16" fill="#6b7280">Remplace par /images/project-7.png</text>
+</svg>
