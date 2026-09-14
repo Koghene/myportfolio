@@ -26,18 +26,49 @@ Presque tout se trouve dans **un seul fichier** : `src/data/portfolio.js`.
 | Tous les textes EN | `content.en` |
 | Services, parcours, projets | `content.<lang>.services / experience / projects` |
 
-### Images et fichiers
+### 📁 Où déposer tes images et ton CV
 
-Dépose tes fichiers dans `public/` puis mets à jour les chemins :
+Tout va dans le dossier **`public/`** à la racine du projet. Les fichiers actuels sont des
+**placeholders SVG** : remplace-les par tes vrais fichiers.
 
-- `public/images/photo.svg` → ta photo du hero (`profile.photo`)
-- `public/images/photo-about.svg` → photo section « À propos » (`profile.aboutPhoto`)
-- `public/images/project-1.svg` … → visuels des projets
-- `public/files/cv.pdf` → ton CV (`profile.cvUrl`)
-- `public/favicon.svg` → icône de l'onglet
+```
+myportfolio/
+└── public/
+    ├── favicon.svg              ← icône de l'onglet du navigateur
+    ├── files/
+    │   └── cv.pdf               ← 📄 DÉPOSE TON CV ICI (garde ce nom exact)
+    └── images/
+        ├── photo.jpg            ← 📷 TA PHOTO (grande, section d'accueil)
+        ├── photo-about.jpg      ← 📷 TA PHOTO (section « À propos »)
+        ├── project-1.png        ← Sécurité sociale
+        ├── project-2.png        ← Plateforme de gestion de cours
+        ├── project-3.png        ← Allocation ressources restaurant
+        ├── project-4.png        ← Gestion académique école primaire
+        └── project-5.png        ← Chiffrement SDITH
+```
 
-Les images actuelles sont des placeholders SVG : remplace-les par des `.jpg`/`.png` et
-adapte l'extension dans `portfolio.js`.
+**Deux étapes :**
+
+1. Copie tes fichiers dans `public/images/` (et ton CV dans `public/files/cv.pdf`).
+2. Si ton fichier n'a pas la même extension que le placeholder (`.jpg`/`.png` au lieu de
+   `.svg`), corrige le chemin dans `src/data/portfolio.js` :
+
+```js
+// dans profile
+photo: "/images/photo.jpg",         // au lieu de photo.svg
+aboutPhoto: "/images/photo-about.jpg",
+cvUrl: "/files/cv.pdf",
+
+// dans content.fr.projects et content.en.projects
+image: "/images/project-1.png",     // au lieu de project-1.svg
+```
+
+> ⚠️ Le chemin commence toujours par `/images/...` (sans `public/`) — c'est Vite qui
+> sert le dossier `public` à la racine du site.
+
+**Formats conseillés :** photo d'accueil en portrait ~800×1000 px, photo « À propos » carrée
+~800×800 px, visuels de projets en 16/10 (~1200×750 px). Format `.jpg` pour les photos,
+`.png` pour les captures d'écran, poids < 300 Ko chacun.
 
 ### Couleurs
 
@@ -89,8 +120,14 @@ npx vercel --prod
 
 ## Reste à compléter
 
-- [ ] Ton **email** dans `profile.email` (`src/data/portfolio.js`)
-- [ ] Ton lien **LinkedIn** (ligne commentée dans `socials`)
-- [ ] Tes **photos** dans `public/images/` (`photo.svg`, `photo-about.svg`)
+- [x] Email : `makeunediane@gmail.com`
+- [x] Téléphone et WhatsApp : `+237 672 71 57 35`
+- [x] GitHub : `github.com/Koghene`
+- [x] Les 5 projets (titres et descriptions, FR + EN)
+- [ ] Tes **photos** dans `public/images/` → voir la section « Où déposer tes images »
 - [ ] Ton **CV** dans `public/files/cv.pdf`
-- [ ] Tes **vrais projets**, ton **parcours** et tes **statistiques** dans `content.fr` / `content.en`
+- [ ] Ton lien **LinkedIn** (ligne commentée dans `socials`)
+- [ ] Les **captures d'écran** de tes 5 projets (`project-1.png` … `project-5.png`)
+- [ ] Les **liens démo/code** de tes projets (champs `demo` et `code`, actuellement `"#"`)
+- [ ] Ton **parcours** dans `content.fr.experience` / `content.en.experience` (école, entreprises, années)
+- [ ] Les **statistiques** du hero (`content.<lang>.stats`)

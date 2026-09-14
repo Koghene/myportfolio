@@ -31,7 +31,7 @@ export const profile = {
   photo: "/images/photo.svg", // ta photo de profil (hero)
   aboutPhoto: "/images/photo-about.svg", // ta photo section "À propos"
   cvUrl: "/files/cv.pdf", // dépose ton CV dans public/files/
-  email: "ton.email@exemple.com", // <<< À REMPLACER par ton vrai email
+  email: "makeunediane@gmail.com",
   phone: "+237 672 71 57 35",
   whatsapp: "237672715735", // format international sans "+"
   location: "Yaoundé, Cameroun",
@@ -101,7 +101,7 @@ export const content = {
     },
     stats: [
       { value: "3+", label: "Années d'expérience" },
-      { value: "15+", label: "Projets réalisés" },
+      { value: "5+", label: "Projets réalisés" },
       { value: "10+", label: "Clients satisfaits" },
     ],
     sections: {
@@ -195,75 +195,55 @@ export const content = {
         type: "study",
       },
     ],
-    projectCategories: ["Tous", "Web", "Mobile", "Desktop", "Design"],
+    projectCategories: ["Tous", "Web", "Desktop", "Sécurité"],
     projects: [
       {
-        title: "Plateforme e-commerce",
+        title: "Système d'information — Sécurité sociale",
         category: "Web",
         description:
-          "Boutique en ligne complète : catalogue, panier, paiement et back-office d'administration.",
-        tags: ["React", "Spring Boot", "PostgreSQL"],
+          "Conception d'un système d'information pour la gestion de la sécurité sociale : suivi des assurés, des cotisations et des prestations, avec rôles et tableaux de bord.",
+        tags: ["Merise/UML", "Java", "PostgreSQL"],
         image: "/images/project-1.svg",
         demo: "#",
         code: "#",
       },
       {
-        title: "Application de livraison",
-        category: "Mobile",
+        title: "Plateforme de gestion de cours",
+        category: "Web",
         description:
-          "Application Android de suivi de commandes en temps réel avec notifications push.",
-        tags: ["Kotlin", "Firebase", "Maps"],
+          "Conception et mise en production d'une plateforme de gestion de cours : publication des supports, inscriptions, emplois du temps et suivi des étudiants.",
+        tags: ["React", "Spring Boot", "PostgreSQL"],
         image: "/images/project-2.svg",
         demo: "#",
         code: "#",
       },
       {
-        title: "API d'authentification",
-        category: "Web",
+        title: "Allocation des ressources en restauration",
+        category: "Desktop",
         description:
-          "Service d'authentification sécurisé : JWT, rôles, rafraîchissement de token et documentation Swagger.",
-        tags: ["Spring Boot", "JWT", "Docker"],
+          "Modélisation et implémentation d'une solution d'allocation des ressources dans un restaurant : optimisation des tables, du personnel et des stocks.",
+        tags: ["Modélisation", "Java", "Optimisation"],
         image: "/images/project-3.svg",
         demo: "#",
         code: "#",
       },
       {
-        title: "Dashboard analytique",
+        title: "Gestion académique — École primaire",
         category: "Web",
         description:
-          "Tableau de bord de visualisation de données avec graphiques interactifs et export.",
-        tags: ["React", "Charts", "Node.js"],
+          "Conception et mise en production d'une plateforme de gestion académique pour une école primaire : élèves, notes, bulletins et espace pour les parents.",
+        tags: ["Web", "Base de données", "Bulletins"],
         image: "/images/project-4.svg",
         demo: "#",
         code: "#",
       },
       {
-        title: "Refonte d'identité visuelle",
-        category: "Design",
+        title: "Chiffrement post-quantique SDITH",
+        category: "Sécurité",
         description:
-          "Design system complet : logo, palette, typographies et bibliothèque de composants Figma.",
-        tags: ["Figma", "Design System"],
+          "Analyse et implémentation d'une solution cryptographique basée sur le schéma SDITH (Syndrome Decoding in the Head), signature résistante au quantique.",
+        tags: ["Cryptographie", "Post-quantique", "C/Python"],
         image: "/images/project-5.svg",
-        demo: "#",
-        code: "#",
-      },
-      {
-        title: "Logiciel de gestion de stock",
-        category: "Desktop",
-        description:
-          "Application de bureau pour le suivi des entrées/sorties de stock, avec rapports imprimables et mode hors ligne.",
-        tags: ["JavaFX", "Java", "SQLite"],
-        image: "/images/project-7.svg",
-        demo: "#",
-        code: "#",
-      },
-      {
-        title: "Application de gestion scolaire",
-        category: "Web",
-        description:
-          "Gestion des élèves, notes et bulletins, avec espaces séparés pour l'administration et les parents.",
-        tags: ["React", "Java", "MySQL"],
-        image: "/images/project-6.svg",
         demo: "#",
         code: "#",
       },
@@ -324,7 +304,7 @@ export const content = {
     },
     stats: [
       { value: "3+", label: "Years of experience" },
-      { value: "15+", label: "Projects delivered" },
+      { value: "5+", label: "Projects delivered" },
       { value: "10+", label: "Happy clients" },
     ],
     sections: {
@@ -418,75 +398,55 @@ export const content = {
         type: "study",
       },
     ],
-    projectCategories: ["All", "Web", "Mobile", "Desktop", "Design"],
+    projectCategories: ["All", "Web", "Desktop", "Security"],
     projects: [
       {
-        title: "E-commerce platform",
+        title: "Social security information system",
         category: "Web",
         description:
-          "Full online store: catalog, cart, checkout and an administration back-office.",
-        tags: ["React", "Spring Boot", "PostgreSQL"],
+          "Design of an information system for social security management: tracking of insured members, contributions and benefits, with roles and dashboards.",
+        tags: ["UML", "Java", "PostgreSQL"],
         image: "/images/project-1.svg",
         demo: "#",
         code: "#",
       },
       {
-        title: "Delivery app",
-        category: "Mobile",
+        title: "Course management platform",
+        category: "Web",
         description:
-          "Android app with real-time order tracking and push notifications.",
-        tags: ["Kotlin", "Firebase", "Maps"],
+          "Design and production deployment of a course management platform: material publishing, enrolment, timetables and student tracking.",
+        tags: ["React", "Spring Boot", "PostgreSQL"],
         image: "/images/project-2.svg",
         demo: "#",
         code: "#",
       },
       {
-        title: "Authentication API",
-        category: "Web",
+        title: "Restaurant resource allocation",
+        category: "Desktop",
         description:
-          "Secure auth service: JWT, roles, token refresh and Swagger documentation.",
-        tags: ["Spring Boot", "JWT", "Docker"],
+          "Modelling and implementation of a resource allocation solution for a restaurant: optimisation of tables, staff and stock.",
+        tags: ["Modelling", "Java", "Optimisation"],
         image: "/images/project-3.svg",
         demo: "#",
         code: "#",
       },
       {
-        title: "Analytics dashboard",
+        title: "Primary school academic platform",
         category: "Web",
         description:
-          "Data visualization dashboard with interactive charts and exports.",
-        tags: ["React", "Charts", "Node.js"],
+          "Design and production deployment of an academic management platform for a primary school: pupils, grades, report cards and a parent area.",
+        tags: ["Web", "Database", "Report cards"],
         image: "/images/project-4.svg",
         demo: "#",
         code: "#",
       },
       {
-        title: "Brand identity redesign",
-        category: "Design",
+        title: "SDITH post-quantum encryption",
+        category: "Security",
         description:
-          "Complete design system: logo, palette, typography and a Figma component library.",
-        tags: ["Figma", "Design System"],
+          "Analysis and implementation of a cryptographic solution based on the SDITH scheme (Syndrome Decoding in the Head), a quantum-resistant signature.",
+        tags: ["Cryptography", "Post-quantum", "C/Python"],
         image: "/images/project-5.svg",
-        demo: "#",
-        code: "#",
-      },
-      {
-        title: "Inventory management software",
-        category: "Desktop",
-        description:
-          "Desktop application tracking stock in and out, with printable reports and offline mode.",
-        tags: ["JavaFX", "Java", "SQLite"],
-        image: "/images/project-7.svg",
-        demo: "#",
-        code: "#",
-      },
-      {
-        title: "School management app",
-        category: "Web",
-        description:
-          "Students, grades and report cards, with separate spaces for staff and parents.",
-        tags: ["React", "Java", "MySQL"],
-        image: "/images/project-6.svg",
         demo: "#",
         code: "#",
       },
