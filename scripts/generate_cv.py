@@ -173,28 +173,22 @@ def main():
     sw = SIDEBAR_W - 2 * sx
     y = H - 13 * MM
 
-    # logo KD (image réelle sur pastille claire, coin arrondi)
+    # logo KD (image réelle, grande, coins arrondis, sans pastille)
     logo = Path(__file__).resolve().parent.parent / "public" / "images" / "logo-180.png"
     if logo.exists():
         c.saveState()
         clip = c.beginPath()
-        clip.roundRect(sx, y - 12 * MM, 12 * MM, 12 * MM, 3.2 * MM)
+        clip.roundRect(sx, y - 16 * MM, 16 * MM, 16 * MM, 4 * MM)
         c.clipPath(clip, stroke=0, fill=0)
-        c.setFillColor(WHITE)
-        c.roundRect(sx, y - 12 * MM, 12 * MM, 12 * MM, 3.2 * MM, stroke=0, fill=1)
-        c.drawImage(str(logo), sx + 0.5 * MM, y - 11.5 * MM, 11 * MM, 11 * MM, mask="auto")
+        c.drawImage(str(logo), sx, y - 16 * MM, 16 * MM, 16 * MM, mask="auto")
         c.restoreState()
     else:
         c.setFillColor(ACCENT)
-        c.roundRect(sx, y - 11 * MM, 11 * MM, 11 * MM, 3 * MM, stroke=0, fill=1)
+        c.roundRect(sx, y - 16 * MM, 16 * MM, 16 * MM, 4 * MM, stroke=0, fill=1)
         c.setFillColor(WHITE)
         c.setFont(BOLD, 13)
-        c.drawCentredString(sx + 5.5 * MM, y - 7.7 * MM, "KD")
-    c.setFillColor(WHITE)
-    c.setFont(BOLD, 8)
-    c.drawString(sx + 13.5 * MM, y - 4.6 * MM, "KOGHENE")
-    c.drawString(sx + 13.5 * MM, y - 8.4 * MM, "MAKEUNE DIANE")
-    y -= 18 * MM
+        c.drawCentredString(sx + 8 * MM, y - 10.2 * MM, "KD")
+    y -= 24 * MM
 
     # photo ronde (utilise public/images/photo-cv.jpg si présente)
     photo_r = 17 * MM
