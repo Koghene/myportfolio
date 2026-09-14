@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - Koghene Makeune Diane</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: #16181d;
+        background: #dfe3e8;
+        font-family: Inter, Arial, Helvetica, sans-serif;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        position: relative;
+        display: grid;
+        grid-template-columns: 34% 66%;
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        overflow: hidden;
+        background: #f4f5f7;
+      }
+
+      .page::before {
+        position: absolute;
+        top: -82mm;
+        right: -70mm;
+        width: 180mm;
+        height: 180mm;
+        border-radius: 50%;
+        background: rgba(255, 106, 0, 0.09);
+        content: "";
+      }
+
+      aside {
+        position: relative;
+        z-index: 1;
+        padding: 13mm 8.5mm;
+        color: #f7f7f7;
+        background: linear-gradient(180deg, #14171c 0%, #1d2128 100%);
+      }
+
+      main {
+        position: relative;
+        z-index: 1;
+        padding: 12mm 12mm 9mm;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 2.5mm;
+        margin-bottom: 7mm;
+      }
+
+      .brand-mark {
+        display: grid;
+        place-items: center;
+        width: 11mm;
+        height: 11mm;
+        border-radius: 3mm;
+        color: #fff;
+        background: linear-gradient(135deg, #ff6a00, #ff9b52);
+        font-size: 11pt;
+        font-weight: 800;
+      }
+
+      .brand-name {
+        font-size: 8.4pt;
+        font-weight: 800;
+        line-height: 1.25;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+
+      .photo {
+        width: 36mm;
+        height: 36mm;
+        margin: 0 auto 7mm;
+        overflow: hidden;
+        border: 2px solid rgba(255, 106, 0, 0.85);
+        border-radius: 50%;
+        background: #262a31;
+      }
+
+      .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      h1 {
+        margin: 0;
+        color: #16181d;
+        font-size: 23pt;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      h1 span {
+        display: block;
+        color: #ff6a00;
+      }
+
+      .role {
+        margin: 3mm 0 4mm;
+        color: #4a4f58;
+        font-size: 10.5pt;
+        font-weight: 800;
+        line-height: 1.4;
+      }
+
+      .intro {
+        margin: 0 0 5mm;
+        color: #50555e;
+        font-size: 8.6pt;
+        line-height: 1.5;
+        text-align: justify;
+      }
+
+      h2 {
+        margin: 0;
+        color: #16181d;
+        font-size: 10.5pt;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      aside h2 {
+        margin-bottom: 3.5mm;
+        color: #ff6a00;
+      }
+
+      aside section + section {
+        margin-top: 6mm;
+      }
+
+      main section + section {
+        margin-top: 5mm;
+      }
+
+      .contact-list,
+      .simple-list {
+        display: grid;
+        gap: 3mm;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .contact-list li,
+      .simple-list li {
+        font-size: 8.4pt;
+        line-height: 1.4;
+        word-break: break-word;
+      }
+
+      .contact-list strong {
+        display: block;
+        color: #ff6a00;
+        font-size: 7pt;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .simple-list li {
+        position: relative;
+        padding-left: 4mm;
+        color: #e7e9ec;
+      }
+
+      .simple-list li::before {
+        position: absolute;
+        top: 1.5mm;
+        left: 0;
+        width: 1.6mm;
+        height: 1.6mm;
+        border-radius: 50%;
+        background: #ff6a00;
+        content: "";
+      }
+
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.8mm;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .tag-list li {
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        border-radius: 999px;
+        padding: 1.5mm 2.4mm;
+        color: #f5f5f5;
+        background: rgba(255, 255, 255, 0.06);
+        font-size: 7.4pt;
+        font-weight: 700;
+      }
+
+      .lang-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 8.4pt;
+      }
+
+      .lang-row + .lang-row {
+        margin-top: 2.5mm;
+      }
+
+      .lang-row span:last-child {
+        color: #ff9b52;
+        font-weight: 700;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 3.2mm;
+      }
+
+      .item {
+        position: relative;
+        padding-left: 6mm;
+      }
+
+      .item::before {
+        position: absolute;
+        top: 1.4mm;
+        left: 0;
+        width: 2.5mm;
+        height: 2.5mm;
+        border-radius: 50%;
+        background: #ff6a00;
+        content: "";
+      }
+
+      .item h3 {
+        margin: 0;
+        color: #16181d;
+        font-size: 9.6pt;
+      }
+
+      .meta {
+        display: block;
+        margin: 0.7mm 0 1.2mm;
+        color: #787d86;
+        font-size: 8pt;
+        font-weight: 800;
+      }
+
+      .item p,
+      .item ul {
+        margin: 0;
+        color: #54585f;
+        font-size: 7.9pt;
+        line-height: 1.42;
+      }
+
+      .item ul {
+        padding-left: 4.5mm;
+      }
+
+      .item li + li {
+        margin-top: 0.8mm;
+      }
+
+      .section-title {
+        display: flex;
+        align-items: center;
+        gap: 3mm;
+        margin-bottom: 3mm;
+      }
+
+      .section-title::after {
+        flex: 1;
+        height: 1px;
+        background: #d4d8de;
+        content: "";
+      }
+
+      .highlight {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.6mm;
+        margin: 0 0 5mm;
+      }
+
+      .highlight div {
+        border-radius: 3mm;
+        padding: 2.8mm;
+        background: #16181d;
+      }
+
+      .highlight strong {
+        display: block;
+        color: #ff6a00;
+        font-size: 11pt;
+      }
+
+      .highlight span {
+        color: #f5f5f5;
+        font-size: 7pt;
+        font-weight: 800;
+      }
+
+      .footer-note {
+        position: absolute;
+        right: 12mm;
+        bottom: 5mm;
+        color: #8b9099;
+        font-size: 6.8pt;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <aside>
+        <div class="brand">
+          <span class="brand-mark">KD</span>
+          <span class="brand-name">Koghene<br />Makeune Diane</span>
+        </div>
+
+        <div class="photo">
+          <img src="../images/photo.svg" alt="Koghene Makeune Diane" />
+        </div>
+
+        <section>
+          <h2>Contact</h2>
+          <ul class="contact-list">
+            <li><strong>Email</strong>makeunediane@gmail.com</li>
+            <li><strong>Téléphone</strong>+237 672 71 57 35</li>
+            <li><strong>Localisation</strong>Yaoundé, Cameroun</li>
+            <li><strong>GitHub</strong>github.com/Koghene</li>
+            <li><strong>WhatsApp</strong>wa.me/237672715735</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Compétences</h2>
+          <ul class="tag-list">
+            <li>React</li>
+            <li>JavaScript</li>
+            <li>Spring Boot</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>Kotlin</li>
+            <li>Node.js</li>
+            <li>API REST</li>
+            <li>JavaFX</li>
+            <li>PostgreSQL</li>
+            <li>MySQL</li>
+            <li>UML / Merise</li>
+            <li>Cryptographie</li>
+            <li>Git</li>
+            <li>Figma</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Langues</h2>
+          <div class="lang-row"><span>Français</span><span>Courant</span></div>
+          <div class="lang-row"><span>Anglais</span><span>Intermédiaire</span></div>
+        </section>
+
+        <section>
+          <h2>Qualités</h2>
+          <ul class="simple-list">
+            <li>Esprit d'analyse et résolution de problèmes</li>
+            <li>Rigueur, autonomie et sens du détail</li>
+            <li>Travail en équipe et communication claire</li>
+            <li>Curiosité technique et apprentissage rapide</li>
+          </ul>
+        </section>
+      </aside>
+
+      <main>
+        <h1>Koghene <span>Makeune Diane</span></h1>
+        <p class="role">
+          Élève ingénieure en Génie Informatique • Développement web, mobile
+          &amp; desktop
+        </p>
+        <p class="intro">
+          Élève ingénieure en 4<sup>e</sup> année de Génie Informatique à
+          l'École Nationale Supérieure Polytechnique de Yaoundé, intégrée au
+          niveau 3 après réussite au concours d'entrée. Je conçois et développe
+          des systèmes d'information et des applications web, mobiles et desktop,
+          de la modélisation jusqu'à la mise en production, avec une attention
+          particulière portée à la qualité du code, à la performance et à
+          l'expérience utilisateur.
+        </p>
+
+        <div class="highlight">
+          <div><strong>4<sup>e</sup></strong><span>Année ENSPY</span></div>
+          <div><strong>5+</strong><span>Projets réalisés</span></div>
+          <div><strong>Fullstack</strong><span>Web • Mobile • Desktop</span></div>
+        </div>
+
+        <section>
+          <div class="section-title"><h2>Formation</h2></div>
+          <div class="timeline">
+            <article class="item">
+              <h3>École Nationale Supérieure Polytechnique de Yaoundé (ENSPY)</h3>
+              <span class="meta">Depuis 2025 • Cycle ingénieur, Génie Informatique — 4<sup>e</sup> année</span>
+              <p>
+                Admise au niveau 3 sur concours d'entrée. Génie logiciel,
+                systèmes d'information, bases de données, réseaux, cryptographie
+                et conduite de projets informatiques.
+              </p>
+            </article>
+
+            <article class="item">
+              <h3>Université de Yaoundé I</h3>
+              <span class="meta">2023 – 2025 • Informatique, niveaux 1 et 2</span>
+              <p>
+                Fondamentaux de l'informatique et des mathématiques :
+                algorithmique, programmation, structures de données, logique et
+                analyse.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-title"><h2>Expérience professionnelle</h2></div>
+          <div class="timeline">
+            <article class="item">
+              <h3>Kratos Financials INC</h3>
+              <span class="meta">2026 • Stagiaire — Développement logiciel</span>
+              <ul>
+                <li>Développement et intégration de fonctionnalités applicatives en environnement professionnel.</li>
+                <li>Tests, correction d'anomalies et participation aux revues de code.</li>
+                <li>Collaboration en équipe agile et suivi des livrables.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-title"><h2>Projets sélectionnés</h2></div>
+          <div class="timeline">
+            <article class="item">
+              <h3>Système d'information — Sécurité sociale</h3>
+              <span class="meta">Conception • Modélisation UML / Merise</span>
+              <ul>
+                <li>Conception d'un système de gestion des assurés, cotisations et prestations.</li>
+                <li>Modélisation des données, gestion des rôles et tableaux de bord de suivi.</li>
+              </ul>
+            </article>
+
+            <article class="item">
+              <h3>Plateforme de gestion de cours</h3>
+              <span class="meta">Développement web • Mise en production</span>
+              <ul>
+                <li>Publication des supports, inscriptions, emplois du temps et suivi des étudiants.</li>
+                <li>Conception, développement et déploiement de la solution.</li>
+              </ul>
+            </article>
+
+            <article class="item">
+              <h3>Allocation des ressources en restauration</h3>
+              <span class="meta">Modélisation • Optimisation • Desktop</span>
+              <ul>
+                <li>Modélisation et implémentation d'une solution d'allocation des ressources.</li>
+                <li>Optimisation de la gestion des tables, du personnel et des stocks.</li>
+              </ul>
+            </article>
+
+            <article class="item">
+              <h3>Plateforme de gestion académique — École primaire</h3>
+              <span class="meta">Développement web • Mise en production</span>
+              <ul>
+                <li>Gestion des élèves, des notes et génération automatique des bulletins.</li>
+                <li>Espaces dédiés à l'administration et aux parents.</li>
+              </ul>
+            </article>
+
+            <article class="item">
+              <h3>Chiffrement post-quantique SDITH</h3>
+              <span class="meta">Cryptographie • Analyse et implémentation</span>
+              <ul>
+                <li>Étude du schéma SDITH (Syndrome Decoding in the Head), signature résistante au quantique.</li>
+                <li>Implémentation et analyse des performances de la solution cryptographique.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <p class="footer-note">CV • Koghene Makeune Diane • makeunediane@gmail.com</p>
+      </main>
+    </div>
+  </body>
+</html>
