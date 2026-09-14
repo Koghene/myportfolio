@@ -66,6 +66,31 @@ Pour recevoir les messages directement par email, branche un service comme
 [Formspree](https://formspree.io) ou [Web3Forms](https://web3forms.com) dans
 `src/components/Contact.jsx`.
 
-## Déploiement
+## Déploiement sur Vercel
 
-Vercel ou Netlify : build `npm run build`, dossier de sortie `dist`.
+Le fichier `vercel.json` est déjà configuré. Il ne reste qu'à connecter le dépôt :
+
+1. Va sur [vercel.com/new](https://vercel.com/new) et connecte-toi avec ton compte **GitHub**.
+2. Clique sur **Import** en face du dépôt `Koghene/myportfolio`.
+3. Vercel détecte automatiquement Vite — laisse les réglages par défaut
+   (Build Command `npm run build`, Output Directory `dist`).
+4. Dans **Settings → Git → Production Branch**, choisis la branche à publier
+   (`main` après avoir fusionné, ou directement `arena/01a09fa5-myportfolio`).
+5. Clique sur **Deploy**. Ton site sera en ligne sur `https://<nom-du-projet>.vercel.app`.
+
+Ensuite, chaque `git push` redéploie automatiquement le site.
+
+### En ligne de commande (alternative)
+
+```bash
+npx vercel login
+npx vercel --prod
+```
+
+## Reste à compléter
+
+- [ ] Ton **email** dans `profile.email` (`src/data/portfolio.js`)
+- [ ] Ton lien **LinkedIn** (ligne commentée dans `socials`)
+- [ ] Tes **photos** dans `public/images/` (`photo.svg`, `photo-about.svg`)
+- [ ] Ton **CV** dans `public/files/cv.pdf`
+- [ ] Tes **vrais projets**, ton **parcours** et tes **statistiques** dans `content.fr` / `content.en`
