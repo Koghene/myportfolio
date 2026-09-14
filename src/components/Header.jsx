@@ -48,7 +48,7 @@ export function Header() {
     <header className={scrolled ? "site-header is-scrolled" : "site-header"}>
       <div className="header-inner">
         <a className="logo" href="#home" onClick={() => setOpen(false)}>
-          <span className="logo-mark">{profile.initials}</span>
+          <img className="logo-mark" src="/images/logo-180.png" alt="Logo KD" width="38" height="38" />
           <span className="logo-text">{profile.name}</span>
         </a>
 
