@@ -9,7 +9,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="footer-inner">
         <a className="logo" href="#home">
-          <img className="logo-mark" src="/images/logo-180.png" alt="Logo KD" width="38" height="38" />
+          <img className="logo-mark" src="/images/logo-180.png" alt="Logo KD" width="48" height="48" />
           <span className="logo-text">{profile.name}</span>
         </a>
 
