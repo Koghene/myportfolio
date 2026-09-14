@@ -28,8 +28,8 @@ import { FaWhatsapp } from "react-icons/fa";
 export const profile = {
   name: "Koghene Makeune Diane",
   initials: "KD",
-  photo: "/images/photo.svg", // ta photo de profil (hero)
-  aboutPhoto: "/images/photo-about.svg", // ta photo section "À propos"
+  photo: "/images/photo.png", // ta photo de profil (hero)
+  aboutPhoto: "/images/photo-about.png", // ta photo section "À propos"
   cvUrl: "/files/cv.pdf", // dépose ton CV dans public/files/
   email: "makeunediane@gmail.com",
   phone: "+237 672 71 57 35",
