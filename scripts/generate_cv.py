@@ -184,17 +184,39 @@ def main():
     c.drawString(sx + 13.5 * MM, y - 8.4 * MM, "MAKEUNE DIANE")
     y -= 18 * MM
 
-    # emplacement photo (cercle)
+    # photo ronde (utilise public/images/photo-cv.jpg si présente)
     photo_r = 17 * MM
     cx = SIDEBAR_W / 2
     c.setFillColor(HexColor("#262a31"))
     c.circle(cx, y - photo_r, photo_r, stroke=0, fill=1)
+
+    photo = None
+    for candidate in ("photo-cv.jpg", "photo.jpg", "photo.png", "photo-about.jpg"):
+        path = Path(__file__).resolve().parent.parent / "public" / "images" / candidate
+        if path.exists():
+            photo = path
+            break
+
+    if photo:
+        c.saveState()
+        clip = c.beginPath()
+        clip.circle(cx, y - photo_r, photo_r)
+        c.clipPath(clip, stroke=0, fill=0)
+        c.drawImage(
+            str(photo),
+            cx - photo_r, y - 2 * photo_r,
+            2 * photo_r, 2 * photo_r,
+            preserveAspectRatio=True, anchor="c", mask="auto",
+        )
+        c.restoreState()
+    else:
+        c.setFillColor(HexColor("#8b9099"))
+        c.setFont(REG, 6.5)
+        c.drawCentredString(cx, y - photo_r - 1, "PHOTO")
+
     c.setStrokeColor(ACCENT)
     c.setLineWidth(1.4)
     c.circle(cx, y - photo_r, photo_r, stroke=1, fill=0)
-    c.setFillColor(HexColor("#8b9099"))
-    c.setFont(REG, 6.5)
-    c.drawCentredString(cx, y - photo_r - 1, "PHOTO")
     y -= 2 * photo_r + 8 * MM
 
     def side_title(label, yy):

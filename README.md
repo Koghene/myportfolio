@@ -48,7 +48,21 @@ myportfolio/
         └── project-5.png        ← Chiffrement SDITH
 ```
 
-**Deux étapes :**
+### ⚡ Méthode automatique (recommandée)
+
+Un script prépare tout à partir d'**une seule photo** — recadrage, redimensionnement,
+compression et mise à jour des chemins :
+
+```bash
+pip install pillow                                  # une seule fois
+python3 scripts/add_photo.py ~/Images/ma-photo.jpg  # ← ton fichier
+python3 scripts/generate_cv.py                      # régénère le CV avec la photo
+```
+
+Il génère `photo.jpg` (portrait 4/5), `photo-about.jpg` (carré) et `photo-cv.jpg`,
+met à jour `src/data/portfolio.js` et supprime les placeholders. Rien d'autre à faire.
+
+### Méthode manuelle
 
 1. Copie tes fichiers dans `public/images/` (et ton CV dans `public/files/cv.pdf`).
 2. Si ton fichier n'a pas la même extension que le placeholder (`.jpg`/`.png` au lieu de
