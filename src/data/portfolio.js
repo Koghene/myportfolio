@@ -81,7 +81,7 @@ export const content = {
     ui: {
       hire: "Me contacter",
       cv: "Télécharger le CV",
-      available: "Disponible pour de nouveaux projets",
+      available: "Disponible pour un stage ou un projet",
       openMenu: "Ouvrir le menu",
       closeMenu: "Fermer le menu",
       theme: "Changer de thème",
@@ -100,9 +100,9 @@ export const content = {
         "Je conçois et développe des applications web, mobiles et desktop modernes, rapides et agréables à utiliser — du design de l'interface jusqu'au backend.",
     },
     stats: [
-      { value: "3+", label: "Années d'expérience" },
+      { value: "4ᵉ", label: "Année à l'ENSPY" },
       { value: "5+", label: "Projets réalisés" },
-      { value: "10+", label: "Clients satisfaits" },
+      { value: "1", label: "Stage en entreprise" },
     ],
     sections: {
       services: { title: "Services", subtitle: "Ce que je peux faire pour vous." },
@@ -157,9 +157,9 @@ export const content = {
       },
     ],
     about: {
-      eyebrow: "Ingénieure en génie informatique basée à Yaoundé",
+      eyebrow: "Élève-ingénieure en génie informatique à l'ENSPY, Yaoundé",
       paragraphs: [
-        "Je suis Diane Koghene Makeune, ingénieure en génie informatique passionnée par la création de produits numériques utiles et bien faits. J'aime transformer une idée en une interface claire, rapide et agréable à utiliser.",
+        "Je suis Diane Koghene Makeune, élève-ingénieure en 4ᵉ année de Génie Informatique à l'École Nationale Supérieure Polytechnique de Yaoundé, passionnée par la création de produits numériques utiles et bien faits. J'aime transformer une idée en une interface claire, rapide et agréable à utiliser.",
         "Mon travail couvre l'ensemble de la chaîne : conception de l'interface, développement web, mobile et desktop, mise en place du backend et déploiement. Je porte une attention particulière à la qualité du code, à la performance et à l'accessibilité.",
         "Curieuse et rigoureuse, je continue d'apprendre chaque jour et je cherche des projets ambitieux où je peux apporter de la valeur.",
       ],
@@ -171,27 +171,27 @@ export const content = {
     },
     experience: [
       {
-        period: "2024 — aujourd'hui",
-        title: "Développeuse Fullstack Freelance",
-        org: "Indépendant · Yaoundé",
+        period: "2026 — aujourd'hui",
+        title: "Élève-ingénieure — 4ᵉ année Génie Informatique",
+        org: "École Nationale Supérieure Polytechnique de Yaoundé (ENSPY)",
         description:
-          "Conception et développement d'applications web et mobiles pour des clients locaux : de la maquette à la mise en production.",
+          "Génie logiciel, systèmes d'information, bases de données, réseaux, cryptographie et développement web, mobile et desktop. Projets d'ingénierie en équipe.",
+        type: "study",
+      },
+      {
+        period: "2025 — 2026", // ⚠️ ajuste les dates de ton stage
+        title: "Stagiaire — Développement logiciel",
+        org: "Kratos Financials INC",
+        description:
+          "Participation au développement de solutions logicielles en environnement professionnel : implémentation de fonctionnalités, tests et collaboration en équipe agile.",
         type: "work",
       },
       {
-        period: "2023 — 2024",
-        title: "Développeuse Web (stage)",
-        org: "Nom de l'entreprise",
+        period: "2022 — 2026", // ⚠️ ajuste ton année d'entrée
+        title: "Cycle Ingénieur — Génie Informatique",
+        org: "École Nationale Supérieure Polytechnique de Yaoundé (ENSPY)",
         description:
-          "Développement de fonctionnalités frontend en React et d'APIs REST, participation aux revues de code.",
-        type: "work",
-      },
-      {
-        period: "2020 — 2023",
-        title: "Ingénierie en Génie Informatique",
-        org: "Nom de l'établissement",
-        description:
-          "Algorithmique, génie logiciel, bases de données, développement web et mobile.",
+          "Formation d'ingénieur : mathématiques, algorithmique, programmation, architecture des systèmes et conduite de projets informatiques.",
         type: "study",
       },
     ],
@@ -284,7 +284,7 @@ export const content = {
     ui: {
       hire: "Hire me",
       cv: "Download CV",
-      available: "Available for new projects",
+      available: "Available for an internship or a project",
       openMenu: "Open menu",
       closeMenu: "Close menu",
       theme: "Toggle theme",
@@ -303,9 +303,9 @@ export const content = {
         "I design and build modern, fast and delightful web, mobile and desktop applications — from the interface down to the backend.",
     },
     stats: [
-      { value: "3+", label: "Years of experience" },
+      { value: "4th", label: "Year at ENSPY" },
       { value: "5+", label: "Projects delivered" },
-      { value: "10+", label: "Happy clients" },
+      { value: "1", label: "Company internship" },
     ],
     sections: {
       services: { title: "Services", subtitle: "What I can do for you." },
@@ -360,9 +360,9 @@ export const content = {
       },
     ],
     about: {
-      eyebrow: "Computer engineer based in Yaoundé",
+      eyebrow: "Computer engineering student at ENSPY, Yaoundé",
       paragraphs: [
-        "I'm Diane Koghene Makeune, a computer engineer passionate about building useful, well-crafted digital products. I love turning an idea into a clear, fast and enjoyable interface.",
+        "I'm Diane Koghene Makeune, a 4th-year Computer Engineering student at the National Advanced School of Engineering of Yaoundé, passionate about building useful, well-crafted digital products. I love turning an idea into a clear, fast and enjoyable interface.",
         "My work spans the whole chain: interface design, web, mobile and desktop development, backend implementation and deployment. I care deeply about code quality, performance and accessibility.",
         "Curious and thorough, I keep learning every day and look for ambitious projects where I can add real value.",
       ],
@@ -374,27 +374,27 @@ export const content = {
     },
     experience: [
       {
-        period: "2024 — present",
-        title: "Freelance Fullstack Developer",
-        org: "Self-employed · Yaoundé",
+        period: "2026 — present",
+        title: "Engineering student — 4th year, Computer Engineering",
+        org: "National Advanced School of Engineering of Yaoundé (ENSPY)",
         description:
-          "Designing and building web and mobile applications for local clients, from mockup to production.",
+          "Software engineering, information systems, databases, networks, cryptography and web, mobile and desktop development. Team engineering projects.",
+        type: "study",
+      },
+      {
+        period: "2025 — 2026",
+        title: "Software Development Intern",
+        org: "Kratos Financials INC",
+        description:
+          "Contributed to software solutions in a professional environment: feature implementation, testing and collaboration within an agile team.",
         type: "work",
       },
       {
-        period: "2023 — 2024",
-        title: "Web Developer (internship)",
-        org: "Company name",
+        period: "2022 — 2026",
+        title: "Engineering degree — Computer Engineering",
+        org: "National Advanced School of Engineering of Yaoundé (ENSPY)",
         description:
-          "Built React frontend features and REST APIs, took part in code reviews.",
-        type: "work",
-      },
-      {
-        period: "2020 — 2023",
-        title: "Computer Engineering degree",
-        org: "School name",
-        description:
-          "Algorithms, software engineering, databases, web and mobile development.",
+          "Engineering curriculum: mathematics, algorithms, programming, systems architecture and IT project management.",
         type: "study",
       },
     ],

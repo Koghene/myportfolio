@@ -124,10 +124,11 @@ npx vercel --prod
 - [x] Téléphone et WhatsApp : `+237 672 71 57 35`
 - [x] GitHub : `github.com/Koghene`
 - [x] Les 5 projets (titres et descriptions, FR + EN)
+- [x] Parcours : ENSPY 4ᵉ année Génie Informatique + stage Kratos Financials INC
 - [ ] Tes **photos** dans `public/images/` → voir la section « Où déposer tes images »
 - [ ] Ton **CV** dans `public/files/cv.pdf`
 - [ ] Ton lien **LinkedIn** (ligne commentée dans `socials`)
 - [ ] Les **captures d'écran** de tes 5 projets (`project-1.png` … `project-5.png`)
 - [ ] Les **liens démo/code** de tes projets (champs `demo` et `code`, actuellement `"#"`)
-- [ ] Ton **parcours** dans `content.fr.experience` / `content.en.experience` (école, entreprises, années)
-- [ ] Les **statistiques** du hero (`content.<lang>.stats`)
+- [ ] Vérifier les **dates** du parcours (ENSPY et stage Kratos Financials) dans `content.<lang>.experience`
+- [ ] Ajuster les **statistiques** du hero si besoin (`content.<lang>.stats`)
