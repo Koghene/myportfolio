@@ -179,7 +179,7 @@ export const content = {
         type: "study",
       },
       {
-        period: "2025 — 2026", // ⚠️ ajuste les dates de ton stage
+        period: "2026", // ⚠️ ajuste les dates exactes de ton stage
         title: "Stagiaire — Développement logiciel",
         org: "Kratos Financials INC",
         description:
@@ -187,11 +187,19 @@ export const content = {
         type: "work",
       },
       {
-        period: "2022 — 2026", // ⚠️ ajuste ton année d'entrée
-        title: "Cycle Ingénieur — Génie Informatique",
+        period: "2025 — 2026",
+        title: "3ᵉ année Génie Informatique — admise sur concours",
         org: "École Nationale Supérieure Polytechnique de Yaoundé (ENSPY)",
         description:
-          "Formation d'ingénieur : mathématiques, algorithmique, programmation, architecture des systèmes et conduite de projets informatiques.",
+          "Intégration du cycle ingénieur de l'ENSPY au niveau 3 après réussite au concours d'entrée. Algorithmique avancée, programmation, architecture des systèmes et conduite de projets.",
+        type: "study",
+      },
+      {
+        period: "2023 — 2025",
+        title: "Niveaux 1 et 2 — Informatique",
+        org: "Université de Yaoundé I",
+        description:
+          "Bases de l'informatique et des mathématiques : algorithmique, programmation, structures de données, logique et analyse.",
         type: "study",
       },
     ],
@@ -382,7 +390,7 @@ export const content = {
         type: "study",
       },
       {
-        period: "2025 — 2026",
+        period: "2026",
         title: "Software Development Intern",
         org: "Kratos Financials INC",
         description:
@@ -390,11 +398,19 @@ export const content = {
         type: "work",
       },
       {
-        period: "2022 — 2026",
-        title: "Engineering degree — Computer Engineering",
+        period: "2025 — 2026",
+        title: "3rd year Computer Engineering — admitted by competitive exam",
         org: "National Advanced School of Engineering of Yaoundé (ENSPY)",
         description:
-          "Engineering curriculum: mathematics, algorithms, programming, systems architecture and IT project management.",
+          "Joined the ENSPY engineering programme at level 3 after passing the entrance exam. Advanced algorithms, programming, systems architecture and project management.",
+        type: "study",
+      },
+      {
+        period: "2023 — 2025",
+        title: "Levels 1 and 2 — Computer Science",
+        org: "University of Yaoundé I",
+        description:
+          "Foundations of computer science and mathematics: algorithms, programming, data structures, logic and analysis.",
         type: "study",
       },
     ],
