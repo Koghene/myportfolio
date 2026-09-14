@@ -36,7 +36,8 @@ myportfolio/
 └── public/
     ├── favicon.svg              ← icône de l'onglet du navigateur
     ├── files/
-    │   └── cv.pdf               ← 📄 DÉPOSE TON CV ICI (garde ce nom exact)
+    │   ├── cv.pdf               ← 📄 CV généré (déjà présent, remplaçable)
+    │   └── cv-koghene-makeune-diane.html  ← version HTML imprimable du CV
     └── images/
         ├── photo.jpg            ← 📷 TA PHOTO (grande, section d'accueil)
         ├── photo-about.jpg      ← 📷 TA PHOTO (section « À propos »)
@@ -97,6 +98,32 @@ Pour recevoir les messages directement par email, branche un service comme
 [Formspree](https://formspree.io) ou [Web3Forms](https://web3forms.com) dans
 `src/components/Contact.jsx`.
 
+## CV
+
+Le CV est déjà généré : **`public/files/cv.pdf`** (A4, 1 page), au même design que le site
+(colonne sombre + accent orange). Il est téléchargeable via le bouton « Télécharger le CV ».
+
+Deux versions existent :
+
+| Fichier | Usage |
+| --- | --- |
+| `public/files/cv.pdf` | Le PDF téléchargé depuis le site |
+| `public/files/cv-koghene-makeune-diane.html` | Version HTML : ouvre-la dans le navigateur et fais `Ctrl+P` → « Enregistrer en PDF » (permet d'inclure ta vraie photo) |
+
+### Modifier le CV
+
+Édite le contenu en haut de **`scripts/generate_cv.py`** (sections `CONTACT`, `SKILLS`,
+`EDUCATION`, `EXPERIENCE`, `PROJECTS`, `QUALITIES`…) puis régénère :
+
+```bash
+pip install reportlab      # une seule fois
+python3 scripts/generate_cv.py
+```
+
+> 💡 Le PDF affiche un rond « PHOTO » à la place de ta photo. Pour l'avoir en vrai :
+> ouvre `cv-koghene-makeune-diane.html`, remplace `../images/photo.svg` par ta photo,
+> puis imprime la page en PDF et enregistre-la sous `public/files/cv.pdf`.
+
 ## Déploiement sur Vercel
 
 Le fichier `vercel.json` est déjà configuré. Il ne reste qu'à connecter le dépôt :
@@ -126,7 +153,7 @@ npx vercel --prod
 - [x] Les 5 projets (titres et descriptions, FR + EN)
 - [x] Parcours : UY1 (niveaux 1-2) → ENSPY sur concours au niveau 3 (2025) → 4ᵉ année + stage Kratos Financials INC
 - [ ] Tes **photos** dans `public/images/` → voir la section « Où déposer tes images »
-- [ ] Ton **CV** dans `public/files/cv.pdf`
+- [x] CV généré (`public/files/cv.pdf`) — à compléter avec ta photo
 - [ ] Ton lien **LinkedIn** (ligne commentée dans `socials`)
 - [ ] Les **captures d'écran** de tes 5 projets (`project-1.png` … `project-5.png`)
 - [ ] Les **liens démo/code** de tes projets (champs `demo` et `code`, actuellement `"#"`)
